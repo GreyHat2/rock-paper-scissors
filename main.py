@@ -1,8 +1,10 @@
+#Rock paper scirros game
 import random
 import math
+best_of = input("Enter best out of: ")
 
 def play():
-    user = input("What's your choice? 'r' for rock, 'p' for paper, 's' for scissors\n")
+    user = input("What's your choice? 'r' for rock, 'p' for paper, 's' for scissors\n>>")
     user = user.lower()
 
     computer = random.choice(['r', 'p', 's'])
@@ -46,7 +48,6 @@ def play_best_of(n):
         print('You have won the best of {} games! What a champ :D'.format(n))
     else:
         print('Unfortunately, the computer has won the best of {} games. Better luck next time!'.format(n))
-
-
+    
 if __name__ == '__main__':
-    play_best_of(3) # 2
+    play_best_of(int(best_of))
